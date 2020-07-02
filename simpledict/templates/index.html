@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+   <body>
+	<h1>Dictionary</h1>
+      <form action = "http://localhost:5000/meaning" method = "post">
+         <p>Enter your word:</p>
+         <p><input type = "text" name = "nm" /></p>
+         <p><input type = "submit" value = "Submit" />    <input type="reset", value="Clear" /></p>
+      </form>
+   </body>
+</html>
