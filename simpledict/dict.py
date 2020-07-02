@@ -16,7 +16,7 @@ def meaning(w):
     else:
         return "Sorry, The word does not exist." 
     
-@new.route('/')
+@new.route('https://arjunr7.github.io/simpledict/')
 def home():
     return render_template('index.html')
 
@@ -34,7 +34,7 @@ def definition():
                 x = meaning(get_close_matches(name,data)[0])
                 return render_template('meaning.html', val = (len(x)-1),l = x, flag=label, alt_wrd=get_close_matches(name,data)[0])
             else:
-                return "<html><script>function goBack() {window.location.href='http://localhost:5000/';}</script><body><h1>%s</h1></body><button onclick='goBack()'>Home</button></html>" %x
+                return "<html><script>function goBack() {window.location.href='https://arjunr7.github.io/simpledict/';}</script><body><h1>%s</h1></body><button onclick='goBack()'>Home</button></html>" %x
         label= 'n'
 
 if __name__ == '__main__':
